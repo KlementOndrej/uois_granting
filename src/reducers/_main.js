@@ -1,5 +1,5 @@
 import { GroupActions } from "./groupreducers"
-import { GroupFetch, GroupFakeFetch } from "./GroupAsyncActions"
+import { GroupFetch, GroupFakeFetch, GroupAsyncUpdate } from "./GroupAsyncActions"
 
 
 /**
@@ -13,11 +13,13 @@ export const bindGroupActions = (dispatch) => {
         onGroupUpdate: (g) => dispatch(GroupActions.group_update(g)),
         onGroupAdd: (g) => dispatch(GroupActions.group_add(g)),
     
-        onGroupMemberRemove: (payload) => dispatch(GroupActions.group_memberRemove(payload)),
+        onGroupMemberRemove: ({user, group}) => dispatch(GroupActions.group_memberRemove({user, group})),
         onGroupMemberUpdate: (payload) => dispatch(GroupActions.group_memberUpdate(payload)),
     
         groupFetch: (id) => dispatch(GroupFetch(id)),
+        
         groupFakeFetch: (id) => dispatch(GroupFakeFetch(id)),    
        
+        groupAsyncUpdate: (group) => dispatch(GroupAsyncUpdate(group))
     }
 }
