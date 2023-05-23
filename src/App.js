@@ -3,16 +3,16 @@ import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { GroupPage } from 'pages/GroupPage';
-import { GroupPageProvider } from 'pages/GroupPageProvider';
+import { GrantingPageProvider } from 'pages/GrantingPageProvider';
 import { AppProvider } from 'pages/AppProvider';
+import { GrantingProgramCard } from 'components/GrantingProgramCard';
 
 function App() {
   return (
     <div className="App">
       
       <AppProvider>
-        <GroupPageProvider id="2d9dcd22-a4a2-11ed-b9df-0242ac120003" />
+        <GrantingPageProvider/>
       </AppProvider>
     </div>
   );
