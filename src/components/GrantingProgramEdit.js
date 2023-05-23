@@ -2,13 +2,6 @@ import Accordion from 'react-bootstrap/Accordion';
 
 import {TextInput} from './TextInput'
 
-
-
-/**
- * List of program properties
- * @param {*} param0 
- * @returns 
- */
 export const GrantingProgramEdit = ({program, actions}) => {
     return (
         <div class="programdescription">

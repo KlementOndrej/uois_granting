@@ -1,10 +1,5 @@
 import Accordion from 'react-bootstrap/Accordion';
 
-/**
- * List of program properties
- * @param {*} param0 
- * @returns 
- */
 export const GrantingProgramDesc = ({program, actions}) => {
     return (
         <div class="programdescription">

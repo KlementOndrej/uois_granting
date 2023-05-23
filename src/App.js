@@ -5,14 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { GrantingPageProvider } from 'pages/GrantingPageProvider';
 import { AppProvider } from 'pages/AppProvider';
-import { GrantingProgramCard } from 'components/GrantingProgramCard';
+import { GrantingPage } from 'pages/GrantingPage';
 
 function App() {
   return (
     <div className="App">
       
       <AppProvider>
-        <GrantingPageProvider/>
+        <GrantingPage/>
       </AppProvider>
     </div>
   );
