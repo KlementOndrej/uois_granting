@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       
       <AppProvider>
-        <GrantingPage/>
+        <GrantingPageProvider id={"2766fc9a-b095-11ed-9bd8-0242ac110002"}/>
       </AppProvider>
     </div>
   );

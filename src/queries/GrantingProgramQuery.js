@@ -1,59 +1,35 @@
 import { authorizedFetch } from 'queries/authorizedFetch'
 
-/**
- * Funkce, ktera id namapuje na json predstavujici "velky" (podrobny) dotaz na server
- * @param {*} id 
- * @returns 
- */
 export const GrantingProgramQueryJSON = (id) => ({
     "query":
-        `query {
-            programPage {
+        `query ($id: ID!) {
+          programById(id: $id) {
+            id
+            lastchange
+            name
+            nameEn
+            subjects {
               id
-              name
               lastchange
-              type {
-                id
+            }
+            type {
+              name
+              level {
                 name
-                level {
-                  id
-                  name
-                }
-                form {
-                  id
-                  name
-                }
-                language {
-                  id
-                  name
-                }
-                title {
-                  id
-                  name
-                }
+                id
               }
-              subjects {
+              language {
                 id
                 name
-                lastchange
-                semesters {
-                  id
-                  order
-                  lastchange
-                  topics {
-                    id
-                    name
-                    lastchange
-                  }
-                  credits
-                  classificationType {
-                    id
-                    name
-                  }
-                }
+              }
+              form {
+                name
+                id
               }
             }
-          }`
+          }
+        }`,
+        "variables": {"id": id}
 })
 
 /**

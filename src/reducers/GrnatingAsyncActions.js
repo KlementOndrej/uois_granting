@@ -40,7 +40,7 @@ export const FetchHelper = (id, query, resultselector, dispatch, getState) => {
  * @returns 
  */
 export const ProgramFetch = (id) => (dispatch, getState) => {
-    const programSelector = (json) => json.data.groupById
+    const programSelector = (json) => json.data.programById
     const bodyfunc = async () => {
         let programData = await FetchHelper(id, GrantingProgramQuery, programSelector, dispatch, getState)
         
@@ -55,7 +55,7 @@ export const ProgramFetch = (id) => (dispatch, getState) => {
  * @returns 
  */
 export const ProgramFakeFetch = (id) => (dispatch, getState) => {
-    const programSelector = (json) => json.groupById
+    const programSelector = (json) => json.programById
     const bodyfunc = async () => {
         let programData = await FetchHelper(id, fakeQuery, programSelector, dispatch, getState)
         dispatch(ProgramActions.program_select(programData))

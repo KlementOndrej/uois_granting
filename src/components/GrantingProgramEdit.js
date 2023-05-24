@@ -4,8 +4,8 @@ import {TextInput} from './TextInput'
 
 export const GrantingProgramEdit = ({program, actions}) => {
     return (
-        <div class="programdescription">
-        <div class="basicinfo">
+        <div className="programdescription">
+        <div className="basicinfo">
             <TextInput placeholder={"Nazev studijniho programu"} id={program.id} value={program.name}/>
             <table className="table table-hover table-bordered">
                 <tbody>
@@ -14,7 +14,7 @@ export const GrantingProgramEdit = ({program, actions}) => {
                             Typ studijního programu
                         </td>
                         <td>
-                            {program.level.name}
+                            {program.type.level.name}
                         </td>
                     </tr>
                     <tr>
@@ -22,7 +22,7 @@ export const GrantingProgramEdit = ({program, actions}) => {
                             Forma studia
                         </td>
                         <td>
-                            {program.form.name}
+                            {program.type.form.name}
                         </td>
                     </tr>
                     <tr>
@@ -30,7 +30,7 @@ export const GrantingProgramEdit = ({program, actions}) => {
                             Jazyk studia
                         </td>
                         <td>
-                            {program.language.name}
+                            {program.type.language.name}
                         </td>
                     </tr>
                 </tbody>

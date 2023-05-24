@@ -2,8 +2,8 @@ import Accordion from 'react-bootstrap/Accordion';
 
 export const GrantingProgramDesc = ({program, actions}) => {
     return (
-        <div class="programdescription">
-        <div class="basicinfo">
+        <div className="programdescription">
+        <div className="basicinfo">
             <h1>Nazev programu</h1>
             <table className="table table-hover table-bordered">
                 <tbody>
