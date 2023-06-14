@@ -1,4 +1,4 @@
-import { ProgramFakeFetch, ProgramFetch} from 'reducers/GrnatingAsyncActions'
+import { ProgramFakeFetch, ProgramFetch, ProgramAsyncUpdate} from 'reducers/GrnatingAsyncActions'
 
 /**
  * vytvori actions
@@ -9,6 +9,8 @@ export const bindGrantingActions = (dispatch) => {
     return {
         programFetch: (id) => dispatch(ProgramFetch(id)),
         
-        programFakeFetch: (id) => dispatch(ProgramFakeFetch(id)),    
+        programFakeFetch: (id) => dispatch(ProgramFakeFetch(id)),
+
+        programAsyncUpdate: (program) => dispatch(ProgramAsyncUpdate(program))
     }
 }

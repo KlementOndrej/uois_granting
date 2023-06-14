@@ -100,12 +100,7 @@ export const program =
             ]
     
           }
-/**
- * "Jakoze" dotaz na server, ma shodnou signaturu s "pravym" dotazem.
- * stringify a parse je pouzito pro uplnou kopii promenne, aby se nevracela stale stejna skupina, pri modifikaci obsahu by to delalo problemy.
- * @param {*} id 
- * @returns 
- */
+
 export const fakeQuery = async (id) => ({json: () => {
     const json = JSON.stringify(program)
     const result = JSON.parse(json)

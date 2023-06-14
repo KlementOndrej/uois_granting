@@ -6,9 +6,6 @@ import { GrantingProgramEdit } from "components/GrantingProgramEdit"
 import { useState } from "react";
 
 
-/**
- * Renders a card containing a list of group members.
- */
 export const GrantingProgramCard = ({program, actions}) => {
     const [edit, setEdit] = useState(false)
 

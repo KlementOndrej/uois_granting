@@ -1,12 +1,14 @@
 import Accordion from 'react-bootstrap/Accordion';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
-import {TextInput} from './TextInput'
+import { ProgramNameInput } from './GrantingProgramNameInput';
 
 export const GrantingProgramEdit = ({program, actions}) => {
     return (
         <div className="programdescription">
         <div className="basicinfo">
-            <TextInput placeholder={"Nazev studijniho programu"} id={program.id} value={program.name}/>
+            <ProgramNameInput program={program} actions={actions}/>
             <table className="table table-hover table-bordered">
                 <tbody>
                     <tr>
@@ -14,7 +16,11 @@ export const GrantingProgramEdit = ({program, actions}) => {
                             Typ studijního programu
                         </td>
                         <td>
-                            {program.type.level.name}
+                            <DropdownButton id="dropdown-basic-button" title={program.type.level.name}>
+                                <Dropdown.Item href="#/action-1">bakalarsky</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">magisteersky</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">magistersky navazujci</Dropdown.Item>
+                            </DropdownButton>
                         </td>
                     </tr>
                     <tr>
