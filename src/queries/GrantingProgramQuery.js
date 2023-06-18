@@ -13,6 +13,7 @@ export const GrantingProgramQueryJSON = (id) => ({
               lastchange
             }
             type {
+              id
               name
               level {
                 name

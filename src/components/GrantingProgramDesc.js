@@ -12,7 +12,7 @@ export const GrantingProgramDesc = ({program, actions}) => {
                             Typ studijního programu
                         </td>
                         <td>
-                            magisterský
+                            {program.type.level.name}
                         </td>
                     </tr>
                     <tr>
@@ -20,7 +20,7 @@ export const GrantingProgramDesc = ({program, actions}) => {
                             Forma studia
                         </td>
                         <td>
-                            prezenční
+                            {program.type.form.name}
                         </td>
                     </tr>
                     <tr>
@@ -28,7 +28,7 @@ export const GrantingProgramDesc = ({program, actions}) => {
                             Jazyk studia
                         </td>
                         <td>
-                            čeština
+                            {program.type.language.name}
                         </td>
                     </tr>
                 </tbody>
