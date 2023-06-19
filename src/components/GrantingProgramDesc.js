@@ -5,6 +5,7 @@ export const GrantingProgramDesc = ({program, actions}) => {
         <div className="programdescription">
         <div className="basicinfo">
             <h1>{program.name}</h1>
+            <h3>{program.type.name}</h3>
             <table className="table table-hover table-bordered">
                 <tbody>
                     <tr>

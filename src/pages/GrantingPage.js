@@ -2,7 +2,8 @@ import Card from "react-bootstrap/Card";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
-import { GrantingProgramCard } from 'components/GrantingProgramCard'
+import { GrantingProgramDesc } from "components/GrantingProgramDesc"
+import { GrantingProgramEdit } from "components/GrantingProgramEdit";
 
 
 export const GrantingPage = ({program, actions}) => {
@@ -14,11 +15,11 @@ export const GrantingPage = ({program, actions}) => {
                     id="tabs"
                     className="mb-3"
                 >
-                    <Tab eventKey="Card0" title="Program">
-                    <GrantingProgramCard program={program} actions={actions}/>
+                    <Tab eventKey="Card0" title="Zobrazeni programu">
+                        <GrantingProgramDesc program={program} actions={actions}/>
                     </Tab>
-                    <Tab eventKey="Card1" title="Predmet">
-                    afsd
+                    <Tab eventKey="Card1" title="Editace programu">
+                        <GrantingProgramEdit program={program} actions={actions}/>
                     </Tab>
                 </Tabs>
         </Card>

@@ -122,6 +122,19 @@ export const ProgramTypeAsyncUpdate = (program) => (dispatch, getState) => {
                     id
                     type{
                         id
+                        name
+                        level {
+                            name
+                            id
+                        }
+                        language {
+                            id
+                            name
+                        }
+                        form {
+                            name
+                            id
+                        }
                     }
                     lastchange
                   }
