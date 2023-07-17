@@ -24,9 +24,7 @@ export const GrantingProgramInsert = ({actions}) => {
                 name: programName,
                 typeId: programTypeId            
             }
-            console.log(newProgram)
-            actions.programAsyncInsert({newProgram})
-                .then(json=>console.log("ProgramInsert", json.data.programInsert.msg))
+            actions.programAsyncInsert(newProgram)
         }
 
     return (

@@ -38,7 +38,6 @@ const GrantingProgramInsertJSON = (name, typeId) => ({
  * @param {string} name - The name of the program.
  */
 export const GrantingProgramInsert = (name, typeId) =>
-  console.log(name, typeId)
   authorizedFetch('/gql', {
     body: JSON.stringify(GrantingProgramInsertJSON(name, typeId)),
   });
