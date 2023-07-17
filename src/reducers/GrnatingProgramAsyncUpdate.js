@@ -1,4 +1,4 @@
-import { ProgramActions } from "./grantingreducers" 
+import { GrantingActions } from "./grantingreducers" 
 
 import { authorizedFetch } from "queries/authorizedFetch"
 
@@ -42,7 +42,7 @@ export const ProgramAsyncUpdate = (program) => (dispatch, getState) => {
                     console.log("Update selhalo")
                 } else {
                     const lastchange = json.data.programUpdate.program.lastchange
-                    dispatch(ProgramActions.program_update({...program, lastchange: lastchange}))
+                    dispatch(GrantingActions.granting_update({...program, lastchange: lastchange}))
                 }
                 return json
             }
@@ -104,7 +104,7 @@ export const ProgramTypeAsyncUpdate = (program) => (dispatch, getState) => {
                     console.log("Update selhalo")
                 } else {
                     const lastchange = json.data.programUpdate.program.lastchange
-                    dispatch(ProgramActions.program_update({...program, lastchange: lastchange}))
+                    dispatch(GrantingActions.granting_update({...program, lastchange: lastchange}))
                 }
                 return json
             }

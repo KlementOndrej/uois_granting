@@ -5,13 +5,14 @@ import Tabs from 'react-bootstrap/Tabs';
 import { GrantingProgramDesc } from "components/GrantingProgramDesc"
 import { GrantingProgramEdit } from "components/GrantingProgramEdit";
 import { GrantingProgramInsert } from "components/GrantingProgramInsert";
-import { GrantingSemestrDesc } from "components/GrantingSemesterDesc";
-
+import { GrantingSemesterDesc } from "components/GrantingSemesterDesc";
+import { GrantingSemesterList } from "components/GrantingSemesterList";
+import { GrantingSemesterEdit } from "components/GrantingSemesterEdit";
 
 export const GrantingPage = ({program, actions}) => {
+    console.log("program ", program)
     return (
         <Card>
-
                 <Tabs
                     defaultActiveKey="profile"
                     id="tabs"
@@ -36,10 +37,10 @@ export const GrantingPage = ({program, actions}) => {
                         
                     </Tab>
                     <Tab eventKey="Card6" title="Zobrazeni semestru">
-                        <GrantingSemesterDesc semester={program.subjects[0].semester[0]}/>
+                        <GrantingSemesterList subject={program.subjects[0]}/>
                     </Tab>
                     <Tab eventKey="Card7" title="Editace semestru">
-                        
+                        <GrantingSemesterEdit semester={program.subjects[0].semesters[0]} actions={actions}/>
                     </Tab>
                     <Tab eventKey="Card8" title="Insert semestru">
                         

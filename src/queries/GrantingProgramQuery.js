@@ -11,7 +11,22 @@ export const GrantingProgramQueryJSON = (id) => ({
             subjects {
               id
               lastchange
+              semesters {
+                id
+                order
+                lastchange
+                topics {
+                  id
+                  name
+                  lastchange
+                }
+                credits
+                classificationType {
+                  id
+                  name
+                }
             }
+          }
             type {
               id
               name

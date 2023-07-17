@@ -5,8 +5,8 @@ import React from "react"
  * @param {Object} semester semester to be displayed
  * @returns table row with semester description
  */
-export const GrantingSemesterDesc = (semester) => {
-    retrun (
+export const GrantingSemesterDesc = ({semester}) => {
+    return (
         <tr key={semester.id}>
             <td>{semester.order}</td>
             <td>{semester.credits}</td>

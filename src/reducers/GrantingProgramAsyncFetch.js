@@ -1,4 +1,4 @@
-import { ProgramActions } from "./grantingreducers" 
+import { GrantingActions } from "./grantingreducers" 
 
 import {GrantingProgramQuery} from 'queries/GrantingProgramQuery'
 import {fakeQuery} from 'queries/fakeQuery'
@@ -28,7 +28,7 @@ export const FetchHelper = (id, query, resultselector, dispatch, getState) => {
             error => error
         )
         .then(
-            json => log('dispatching')(dispatch(ProgramActions.program_update(json))),
+            json => log('dispatching')(dispatch(GrantingActions.granting_update(json))),
             error => error
         )
 
@@ -59,7 +59,7 @@ export const ProgramFakeFetch = (id) => (dispatch, getState) => {
     const programSelector = (json) => json.programById
     const bodyfunc = async () => {
         let programData = await FetchHelper(id, fakeQuery, programSelector, dispatch, getState)
-        dispatch(ProgramActions.program_select(programData))
+        dispatch(GrantingActions.granting_select(programData))
         return programData
     }
     return bodyfunc()

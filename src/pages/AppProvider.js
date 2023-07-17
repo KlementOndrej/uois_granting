@@ -2,7 +2,7 @@ import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 
 import { bindGrantingActions } from 'reducers/_main';
-import { ProgramReducer } from 'reducers/grantingreducers';
+import { GrantingReducer } from 'reducers/grantingreducers';
 
 /**
  * Toto je hlavni store pro celou aplikaci. Zde zacleneno pro demonstraci. 
@@ -10,7 +10,7 @@ import { ProgramReducer } from 'reducers/grantingreducers';
 export const store = configureStore(
     { 
         reducer: {
-            programs: ProgramReducer
+            programs: GrantingReducer
         }, 
         preloadedState: {
             programs: {}

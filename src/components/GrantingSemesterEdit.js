@@ -1,15 +1,14 @@
 import React from 'react';
-import { GrantingProgramTypeSelect } from './GrantingProgramTypeSelect';
-import { ProgramNameInput } from './GrantingProgramNameInput';
+import { SemesterCreditInput } from './GrantingSemesterCreditInput';
 
 /**
- * Program editation
- * @param {Object} program program to be edited
+ * Semester editation
+ * @param {Object} semester semester to be edited
  * @param {Object} actions actions from store
- * @returns component that can edit program properties
+ * @returns component that can edit semester properties
  */
 
-export const GrantingProgramEdit = ({program, actions}) => {
+export const GrantingSemesterEdit = ({semester, actions}) => {
     return (
         <div className="programdescription">
         <div className="basicinfo">
@@ -18,18 +17,26 @@ export const GrantingProgramEdit = ({program, actions}) => {
                 <tbody>
                     <tr>
                         <td>
-                            Název studijního programu
+                            Poradi
                         </td>
                         <td>
-                            <ProgramNameInput program={program} actions={actions}/>
+                            
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Typ studijního programu
+                            Typ klasifikace
                         </td>
                         <td>
-                            <GrantingProgramTypeSelect program={program} actions={actions}/>
+                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Kredity
+                        </td>
+                        <td>
+                           <SemesterCreditInput semester={semester} actions={actions}/>
                         </td>
                     </tr>
                 </tbody>

@@ -1,5 +1,5 @@
 import { GrantingProgramInsert } from "../queries/GrantingProgramInsertMutation";
-import { ProgramActions } from "./grantingreducers";
+import { GrantingActions } from "./grantingreducers";
 
 /**
  * Asynchronous action creator that sends a program insert request to a server.
@@ -15,7 +15,7 @@ export const ProgramAsyncInsert = (newprogram) => (dispatch, getState) => {
         const program = json.data?.programInsert.program;
         if (message === 'ok') {
             console.log("programInsert", message)
-            dispatch(ProgramActions.program_add(program));
+            dispatch(GrantingActions.granting_add(program));
         }
         else {
             console.log("program insert failed")

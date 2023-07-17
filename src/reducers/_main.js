@@ -1,6 +1,7 @@
 import { ProgramAsyncUpdate, ProgramTypeAsyncUpdate} from 'reducers/GrnatingProgramAsyncUpdate'
 import { ProgramFakeFetch, ProgramFetch} from 'reducers/GrantingProgramAsyncFetch'
 import { ProgramAsyncInsert } from './GrantingProgramAsyncInsert'
+import { SemesterAsyncUpdate } from './GrantingSemesterAsyncUpdate'
 
 /**
  * vytvori actions
@@ -17,6 +18,8 @@ export const bindGrantingActions = (dispatch) => {
 
         programTypeAsyncUpdate: (program) => dispatch(ProgramTypeAsyncUpdate(program)),
 
-        programAsyncInsert: (program) => dispatch(ProgramAsyncInsert(program))
+        programAsyncInsert: (program) => dispatch(ProgramAsyncInsert(program)),
+
+        semesterAsyncUpdate: (semester) => dispatch(SemesterAsyncUpdate(semester))
     }
 }

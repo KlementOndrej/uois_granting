@@ -6,19 +6,19 @@ import { CreateItem, DeleteItem, ReplaceItem, UpdateItem, SelectItem } from './k
  * Kompletni rez budocim store.
  * Obsluhuje skupiny
  */
-export const ProgramSlice = createSlice({
-    name: 'programs',
+export const GrantingSlice = createSlice({
+    name: 'granting',
     initialState: {},
     reducers: {
-        program_add: CreateItem,
-        program_delete: DeleteItem,
-        program_replace: ReplaceItem,
-        program_update: UpdateItem,
-        program_select: SelectItem,
+        granting_add: CreateItem,
+        granting_delete: DeleteItem,
+        granting_replace: ReplaceItem,
+        granting_update: UpdateItem,
+        granting_select: SelectItem,
     }
 })
 
 //z rezu odvozene akce
-export const ProgramActions = ProgramSlice.actions
+export const GrantingActions = GrantingSlice.actions
 //z rezu odvozeny stavovy automat
-export const ProgramReducer = ProgramSlice.reducer
+export const GrantingReducer = GrantingSlice.reducer

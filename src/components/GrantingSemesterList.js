@@ -8,7 +8,7 @@ import { GrantingSemesterDesc } from "./GrantingSemesterDesc"
  * @returns table semesters in subject
  */
 
-export const GrantingSemestrList = (subject) => {
+export const GrantingSemesterList = ({subject}) => {
     return (
         <Table striped bordered hover size="sm">
             <thead>
