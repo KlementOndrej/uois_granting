@@ -2,7 +2,6 @@ import { useState, useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { actions } from './AppProvider';
-import { GrantingProgramCard } from 'components/GrantingProgramCard';
 import { GrantingPage } from 'pages/GrantingPage'
 
 /**
