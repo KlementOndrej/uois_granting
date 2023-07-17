@@ -5,12 +5,10 @@ import Tabs from 'react-bootstrap/Tabs';
 import { GrantingProgramDesc } from "components/GrantingProgramDesc"
 import { GrantingProgramEdit } from "components/GrantingProgramEdit";
 import { GrantingProgramInsert } from "components/GrantingProgramInsert";
-import { GrantingSemesterDesc } from "components/GrantingSemesterDesc";
 import { GrantingSemesterList } from "components/GrantingSemesterList";
 import { GrantingSemesterEdit } from "components/GrantingSemesterEdit";
 
 export const GrantingPage = ({program, actions}) => {
-    console.log("program ", program)
     return (
         <Card>
                 <Tabs

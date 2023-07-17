@@ -1,4 +1,4 @@
-import { ProgramAsyncUpdate, ProgramTypeAsyncUpdate} from 'reducers/GrnatingProgramAsyncUpdate'
+import { ProgramAsyncUpdate, ProgramTypeAsyncUpdate} from 'reducers/GranatingProgramAsyncUpdate'
 import { ProgramFakeFetch, ProgramFetch} from 'reducers/GrantingProgramAsyncFetch'
 import { ProgramAsyncInsert } from './GrantingProgramAsyncInsert'
 import { SemesterAsyncUpdate } from './GrantingSemesterAsyncUpdate'

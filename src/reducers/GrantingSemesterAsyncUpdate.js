@@ -1,7 +1,5 @@
 import { GrantingActions } from "./grantingreducers" 
 
-import { authorizedFetch } from "queries/authorizedFetch"
-
 export const SemesterAsyncUpdate = (semester) => (dispatch, getState) => {
     const semesterMutationJSON = (semester) => {
         return {

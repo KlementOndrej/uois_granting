@@ -1,4 +1,6 @@
+import React from 'react'
 import { useState, useCallback } from 'react'
+
 /**
  * Dropdown menu
  * @param {*} id mandatory identification, often related to id of entity 
@@ -15,7 +17,7 @@ export const GrantingDropdown = ({id, value, onChange, items}) => {
             const newValue = e.target.value
             setLocalValue(newValue)
             onChange(newValue)
-        }, [id, onChange]
+        }, [onChange]
     )
 
     return (

@@ -1,5 +1,7 @@
 import React from 'react';
 import { SemesterCreditInput } from './GrantingSemesterCreditInput';
+import { SemesterOrderInput } from './GrantingSemesterOrderInput';
+import { SemesterTypeSelect } from './GrantingSemesterTypeSelect';
 
 /**
  * Semester editation
@@ -20,7 +22,7 @@ export const GrantingSemesterEdit = ({semester, actions}) => {
                             Poradi
                         </td>
                         <td>
-                            
+                            <SemesterOrderInput semester={semester} actions={actions}/>
                         </td>
                     </tr>
                     <tr>
@@ -28,7 +30,7 @@ export const GrantingSemesterEdit = ({semester, actions}) => {
                             Typ klasifikace
                         </td>
                         <td>
-                           
+                           <SemesterTypeSelect semester={semester} actions={actions}/>
                         </td>
                     </tr>
                     <tr>
