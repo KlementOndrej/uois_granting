@@ -5,6 +5,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import { GrantingProgramDesc } from "components/GrantingProgramDesc"
 import { GrantingProgramEdit } from "components/GrantingProgramEdit";
 import { GrantingProgramInsert } from "components/GrantingProgramInsert";
+import { GrantingSemestrDesc } from "components/GrantingSemesterDesc";
 
 
 export const GrantingPage = ({program, actions}) => {
@@ -24,6 +25,24 @@ export const GrantingPage = ({program, actions}) => {
                     </Tab>
                     <Tab eventKey="Card2" title="Insert programu">
                         <GrantingProgramInsert actions={actions}/>
+                    </Tab>
+                    <Tab eventKey="Card3" title="Zobrazeni predmetu">
+                        
+                    </Tab>
+                    <Tab eventKey="Card4" title="Editace redmetu">
+                        
+                    </Tab>
+                    <Tab eventKey="Card5" title="Insert predmetu">
+                        
+                    </Tab>
+                    <Tab eventKey="Card6" title="Zobrazeni semestru">
+                        <GrantingSemesterDesc semester={program.subjects[0].semester[0]}/>
+                    </Tab>
+                    <Tab eventKey="Card7" title="Editace semestru">
+                        
+                    </Tab>
+                    <Tab eventKey="Card8" title="Insert semestru">
+                        
                     </Tab>
                 </Tabs>
         </Card>

@@ -1,6 +1,12 @@
-import Accordion from 'react-bootstrap/Accordion';
+import React from "react"
 
-export const GrantingProgramDesc = ({program, actions}) => {
+/**
+ * Program description
+ * @param {Object} program program to be displayed
+ * @returns table with program information
+ */
+
+export const GrantingProgramDesc = ({program}) => {
     return (
         <div className="programdescription">
         <div className="basicinfo">

@@ -1,8 +1,14 @@
+import React from 'react';
 import { GrantingDropdown } from './GrantingDropdown';
 import { TextInput } from './TextInput';
 import { useState, useCallback } from 'react'
 import { Button } from 'react-bootstrap';
 
+/**
+ * Semestr description
+ * @param {Object} actions actions from store
+ * @returns component that can insert a new program
+ */
 
 export const GrantingProgramInsert = ({actions}) => {
     const [programName, setProgramName] = useState("")

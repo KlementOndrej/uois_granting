@@ -1,5 +1,13 @@
+import React from 'react';
 import { GrantingProgramTypeSelect } from './GrantingProgramTypeSelect';
 import { ProgramNameInput } from './GrantingProgramNameInput';
+
+/**
+ * Program editation
+ * @param {Object} semester semester to be displayed
+ * @param {Object} actions actions from store
+ * @returns component that can edit program properties
+ */
 
 export const GrantingProgramEdit = ({program, actions}) => {
     return (

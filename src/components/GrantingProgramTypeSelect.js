@@ -1,4 +1,12 @@
+import React from "react";
 import { GrantingDropdown } from "./GrantingDropdown"
+
+/**
+ * Dropdown for selecting program type
+ * @param {Object} program program to be edited
+ * @param {Object} actions actions from store
+ * @returns Dropdown for selecting program type to be edited
+ */
 
 export const GrantingProgramTypeSelect = ({program, actions}) => {
     const types = [
