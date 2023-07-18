@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 import { CreateItem, DeleteItem, ReplaceItem, UpdateItem, SelectItem } from './keyedreducers';
-
+import { UpdateSubject } from './subjectsSlice';
 /**
  * Kompletni rez budocim store.
  * Obsluhuje skupiny
@@ -15,6 +15,8 @@ export const GrantingSlice = createSlice({
         granting_replace: ReplaceItem,
         granting_update: UpdateItem,
         granting_select: SelectItem,
+
+        subject_update: UpdateSubject,
     }
 })
 
