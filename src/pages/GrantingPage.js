@@ -7,6 +7,10 @@ import { GrantingProgramEdit } from "components/GrantingProgramEdit";
 import { GrantingProgramInsert } from "components/GrantingProgramInsert";
 import { GrantingSemesterList } from "components/GrantingSemesterList";
 import { GrantingSemesterEdit } from "components/GrantingSemesterEdit";
+import { GrantingSubjectNameInputButton } from 'components/GrantingSubjectNameInputButton';
+import { GrantingSubjectTable}  from "components/GrantingSubjectTable";
+import { GrantingSubjectInsert } from 'components/GrantingSubjectInsert';
+import { GrantingSemesterInsert } from 'components/GrantingSemesterInsert';
 
 export const GrantingPage = ({program, actions}) => {
     return (
@@ -26,13 +30,13 @@ export const GrantingPage = ({program, actions}) => {
                         <GrantingProgramInsert actions={actions}/>
                     </Tab>
                     <Tab eventKey="Card3" title="Zobrazeni predmetu">
-                        
+                    <GrantingSubjectTable  subjects={program.subjects} actions={actions}/>
                     </Tab>
-                    <Tab eventKey="Card4" title="Editace redmetu">
-                        
+                    <Tab eventKey="Card4" title="Editace predmetu">
+                    <GrantingSubjectNameInputButton subject={program.subjects[0]} actions={actions} />
                     </Tab>
                     <Tab eventKey="Card5" title="Insert predmetu">
-                        
+                    <GrantingSubjectInsert programId={program.id} actions={actions} />
                     </Tab>
                     <Tab eventKey="Card6" title="Zobrazeni semestru">
                         <GrantingSemesterList subject={program.subjects[0]}/>
@@ -41,7 +45,7 @@ export const GrantingPage = ({program, actions}) => {
                         <GrantingSemesterEdit semester={program.subjects[0].semesters[0]} actions={actions}/>
                     </Tab>
                     <Tab eventKey="Card8" title="Insert semestru">
-                        
+                       <GrantingSemesterInsert subjectId={program.subjects[0].id} actions={actions} /> 
                     </Tab>
                 </Tabs>
         </Card>
