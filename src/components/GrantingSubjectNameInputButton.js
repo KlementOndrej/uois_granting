@@ -15,6 +15,6 @@ export const GrantingSubjectNameInputButton = ({ subject, actions }) => {
         </div>
     );
 }
-}
 
-export default ShowAddSubjectFormButton;
+
+
