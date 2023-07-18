@@ -15,6 +15,4 @@
     }
   }
 
-export const { updateSubject } = subjectsSlice.actions;
 
-export default subjectsSlice.reducer;
