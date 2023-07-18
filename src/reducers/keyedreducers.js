@@ -1,4 +1,5 @@
 import { v1 as uuid1 } from 'uuid';
+import { current } from '@reduxjs/toolkit';
 
 /**
  * Stavova funkce nad dict, pridava prvek
@@ -51,6 +52,8 @@ export const ReplaceItem = (state, action) => {
  */
 export const UpdateItem = (state, action) => {
     const newItem = action.payload;
+    console.log(newItem)
+    console.log(current(state))
     const oldItem = state[newItem.id]
     state[newItem.id] = {...oldItem, ...newItem}
     

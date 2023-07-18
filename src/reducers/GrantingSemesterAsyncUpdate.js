@@ -51,8 +51,9 @@ export const SemesterAsyncUpdate = (semester) => (dispatch, getState) => {
                 if (msg === "fail") {
                     console.log("Update selhalo")
                 } else {
-                    const lastchange = json.data.semesterUpdate.semester.lastchange
-                    dispatch(GrantingActions.granting_update({...semester, lastchange: lastchange}))
+                    const newSemester = json.data.semesterUpdate.semester
+                    const program = {id: "2766fc9a-b095-11ed-9bd8-0242ac110002", subjects: [{semesters: [newSemester]}]}
+                    dispatch(GrantingActions.granting_update(program))
                 }
                 return json
             }
