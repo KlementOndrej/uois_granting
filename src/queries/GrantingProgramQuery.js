@@ -10,6 +10,8 @@ export const GrantingProgramQueryJSON = (id) => ({
             nameEn
             subjects {
               id
+              name
+              nameEn
               lastchange
               semesters {
                 id
