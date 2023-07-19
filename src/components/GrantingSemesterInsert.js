@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import { TextInput } from './TextInput';
 import { Button } from 'react-bootstrap';
 
+
+/**
+ * Semester insert
+ * @param {ID} subjectId id of subject
+ * @param {Object} actions actions from store
+ * @returns component that can insert a new semester
+ */
+
 export const GrantingSemesterInsert = ({subjectId, actions}) => {
     
     const [classificationtypeId, setClassificationTypeId] = useState('');

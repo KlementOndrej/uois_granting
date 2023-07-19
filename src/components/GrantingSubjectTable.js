@@ -1,16 +1,14 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import { GrantingSubjectNameInputButton } from './GrantingSubjectNameInputButton';
-
-
-
   
 /**
  * A functional React component that displays a table of subjects.
- *
- * @param {Object[]} props.subjects - An array of subjects to display.
+ * @param {Object} subjects An array of subjects to display.
+ * @param {Object} actions actions from store
  * @returns {JSX.Element} The rendered component.
  */
+
 export const GrantingSubjectTable = ({ subjects, actions }) => {
   return (
     <div>

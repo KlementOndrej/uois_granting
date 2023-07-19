@@ -3,6 +3,12 @@ import { useState } from 'react'
 import { Button } from 'react-bootstrap';
 
 
+/**
+ * Subject insert
+ * @param {ID} programId id of program
+ * @param {Object} actions actions from store
+ * @returns component that can insert a new subject
+ */
 
 export const GrantingSubjectInsert = ({programId,actions}) => {
     const [subjectName, setSubjectName] = useState("");

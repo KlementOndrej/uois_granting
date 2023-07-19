@@ -51,9 +51,8 @@ export const GrantingProgramQueryJSON = (id) => ({
 })
 
 /**
- * Realizace dotazu na server. Vyuziva autorizedFetch (zapouzdreni)
- * @param {*} id 
- * @returns 
+ * Performs a fetch request to the server
+ * @param {*} id id of program
  */
 export const GrantingProgramQuery = (id) =>
     authorizedFetch('/gql', {
